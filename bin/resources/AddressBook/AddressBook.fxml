@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:controller="controller.AddressBookController" xmlns:fx="http://javafx.com/fxml">
+
+    <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" minWidth="100" />
+        <ColumnConstraints hgrow="ALWAYS" minWidth="200" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="30" />
+    </rowConstraints>
+    
+    <!-- List View -->
+    <Label text="Contacts:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <ListView fx:id="listView" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.rowSpan="6"/>
+    
+    <!-- First Name -->
+    <Label text="First Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="firstNameTextField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    
+    <!-- Last Name -->
+    <Label text="Last Name:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="lastNameTextField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    
+    <!-- Email -->
+    <Label text="Email:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <TextField fx:id="emailTextField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    
+    <!-- Phone -->
+    <Label text="Phone:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <TextField fx:id="phoneTextField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    
+    <!-- Address -->
+    <Label text="Address:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+    <TextField fx:id="addressTextField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    
+    <!-- Department Dropdown -->
+    <Label text="Department:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="departmentComboBox" promptText="Select Department" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+    
+    <!-- Add Entry Button -->
+    <Button text="Add Entry" onAction="#addEntryButtonPressed" GridPane.rowIndex="7" GridPane.columnIndex="1" />
+
+    
+    <!-- Find by Last Name -->
+    <Label text="Find by Last Name:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+    <TextField fx:id="findByLastNameTextField" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+    <Button text="Find" onAction="#findButtonPressed" GridPane.rowIndex="9" GridPane.columnIndex="1" />
+    
+    <!-- Browse All -->
+    <Button text="Browse All" onAction="#browseAllButtonPressed" GridPane.rowIndex="10" GridPane.columnIndex="1" />
+</GridPane>
